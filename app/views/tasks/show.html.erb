@@ -1,0 +1,12 @@
+<h1>id:
+<%= @task.id %>
+のメッセージ詳細ページ</h1>
+
+<p>
+  <%= @message.content %>
+</p>
+
+
+<%= link_to '一覧に戻る', task_path %>
+
+<%= link_to 'このメッセージを編集する', edit_task_path(@task) %>
