@@ -1,0 +1,10 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザー: <%= current_user.name %></p>
+  <% else %>
+    <div>
+      <div>
+        <h1>Welcome to the Microposts</h1>
+        <%= link_to 'Sign up now!', signup_path %>
+      </div>
+    </div>
+    <% end %>
