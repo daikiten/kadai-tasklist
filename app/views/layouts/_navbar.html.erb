@@ -2,12 +2,12 @@
         <%= link_to 'Users', new_user_path %>
         
         <a href="#"><%= current_user.name %></a>
+        
         <%= link_to 'Logout', logout_path, method: :delete %>
         
       
-            
         <% else %>
         <%= link_to 'Signup', signup_path %>
-        <%= link_to 'Login', login_path %>
+        <%= link_to 'Login', new_session_path %>
         <% end %>
       

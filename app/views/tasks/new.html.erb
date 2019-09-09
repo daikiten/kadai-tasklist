@@ -2,4 +2,6 @@
 
 <%= render 'form', task: @task %>
 
+<%= render 'layouts/error_messages', model: f.object %>
+
 <%= link_to '一覧に戻る', tasks_path %>
