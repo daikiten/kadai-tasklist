@@ -1,7 +1,11 @@
-やらなければならないことを記録しましょう
-
 <%= render 'form', task: @task %>
 
-<%= render 'layouts/error_messages', model: f.object %>
+
+<%= render 'layouts/error_messages', model: @task %>
+
+やらなければならないことを記録しましょう
+
 
 <%= link_to '一覧に戻る', tasks_path %>
+
+
