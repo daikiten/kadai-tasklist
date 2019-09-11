@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:edit, :update, :destroy]
+  before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :require_user_logged_in, only: [:show, :index]
   
   
@@ -8,10 +8,7 @@ class TasksController < ApplicationController
   end
 
   def show
-   if
-   @current_user = User.find_by(id: session[:user_id])
-   render show
-   end
+   @current_user
   end
 
   def new 
