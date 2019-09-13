@@ -22,7 +22,7 @@ class TasksController < ApplicationController
       flash[:success] = 'Taskが正常に保存された'
       redirect_to @task
     else
-      @microposts = current_user.microposts.order(id: :desc).page(params[:page])
+      @tasks = current_user.tasks.order(id: :desc).page(params[:page])
       flash.now[:danger] = 'Taskが保存されなかったよ'
       render :new
     end

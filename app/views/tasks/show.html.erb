@@ -1,13 +1,14 @@
-id:<%= @task.id %>のメッセージ詳細ページ
 
- カテゴリー<%= @task.status %>
+<h1>id:<%= @task.id %>のメッセージ詳細ページ</h1>
+<ul>
+<li>状態<%= @task.status %></li>
 
- Todo<%= @task.content %>
+<li>Todo<%= @task.content %></li>
+</ul>
+
+<p><%= link_to '一覧に戻る', tasks_path %></p>
+
+<p><%= link_to 'このメッセージを編集する', edit_task_path(@task) %></p>.
 
 
-<%= link_to '一覧に戻る', tasks_path %>
-
-<%= link_to 'このメッセージを編集する', edit_task_path(@task) %>
-
-
-<%= link_to 'このメッセージを削除する', @task, method: :delete, data: { confirm: '本当に削除してよろしいですか？'} %>
+<p><%= link_to 'このメッセージを削除する', @task, method: :delete, data: { confirm: '本当に削除してよろしいですか？'} %></p>
