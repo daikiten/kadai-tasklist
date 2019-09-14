@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :require_user_logged_in, only: [:show, :index, :new, :edit, :create, :update, :delete]
-  before_action :correct_user, only: [:index, :new, :create, :update, :show, :edit, :delete]
+  before_action :require_user_logged_in, only: [:index, :show, :new, :create, :edit, :update, :delete]
+  before_action :correct_user, only: [:index, :show, :new, :create, :update, :show, :edit, :delete]
   before_action :set_task, only: [:edit, :update, :destroy]
 
   
